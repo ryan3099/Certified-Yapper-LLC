@@ -8,12 +8,21 @@
     * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif;}
     body {background: #fff; color: #333; line-height: 1.6;}
     header {
-      background: red;
+      position: relative;
       color: #fff;
       text-align: center;
-      padding: 2.5rem 1rem;
+      padding: 5rem 1rem;
+      background: url('https://avatars.mds.yandex.net/i?id=8cec7a16bc652b2c44a2e0d361f8233b_l-4874404-images-thumbs&ref=rim&n=13&w=1050&h=700') no-repeat center/cover;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(255,0,0,0.6);
+    }
+    header h1, header p, header a {
       position: relative;
-      overflow: hidden;
+      z-index: 1;
     }
     header h1 {font-size: 2.5rem; margin-bottom: .5rem;}
     header p {font-size: 1.2rem; max-width: 600px; margin: 0 auto;}
